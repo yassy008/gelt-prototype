@@ -287,6 +287,11 @@ table.info tr:last-child th,table.info tr:last-child td{border-bottom:none}
   font-size:13px;font-weight:700;text-decoration:none;transition:.15s;white-space:nowrap;
 }
 .btn-dl:hover{background:var(--navy)}
+.btn-link{
+  background:var(--amber);color:#3a2a10;border-radius:8px;padding:8px 16px;
+  font-size:13px;font-weight:700;text-decoration:none;transition:.15s;white-space:nowrap;
+}
+.btn-link:hover{background:#f0b35a}
 .mat-empty{display:none;text-align:center;color:var(--ink-soft);padding:40px 0;font-size:14px}
 
 /* ============================================================
@@ -344,6 +349,10 @@ table.info tr:last-child th,table.info tr:last-child td{border-bottom:none}
 .form-grid{display:grid;grid-template-columns:1fr 1fr;gap:0 18px}
 .form-success{
   display:none;background:#e6f4ea;border:1px solid #a8d5b5;color:#1d6b35;
+  border-radius:10px;padding:16px 18px;font-size:14px;margin-bottom:18px;
+}
+.form-error{
+  display:none;background:#fdeaea;border:1px solid #e3b4b4;color:#9a2b2b;
   border-radius:10px;padding:16px 18px;font-size:14px;margin-bottom:18px;
 }
 
@@ -488,7 +497,6 @@ table.info tr:last-child th,table.info tr:last-child td{border-bottom:none}
         <h2>新着情報・お知らせ</h2>
       </div>
       <ul class="news-list" id="newsList"><!-- JSが自動生成 --></ul>
-      <p class="note">※ 上記のお知らせはダミーです。今後、実際の情報に差し替えます。</p>
     </div>
   </div>
 
@@ -518,20 +526,6 @@ table.info tr:last-child th,table.info tr:last-child td{border-bottom:none}
         <h2>研究の概要</h2>
         <p class="sec-lead">本プロジェクトの目的・理論的背景・研究計画をご紹介します。</p>
       </div>
-
-      <!-- 科研費の基本情報（KAKENHI-PROJECT-24K04172） -->
-      <h3 class="sub">研究課題の基本情報</h3>
-      <table class="info">
-        <tr><th>研究種目</th><td>科学研究費助成事業 基盤研究（C）（一般）</td></tr>
-        <tr><th>課題番号</th><td>JP24K04172</td></tr>
-        <tr><th>研究課題名</th><td>国際英語論と批判的応用言語学に基づく英語教育・教員養成の創造</td></tr>
-        <tr><th>研究期間</th><td>2024年4月 〜 2028年3月（2024〜2027年度）</td></tr>
-        <tr><th>研究機関</th><td>名城大学</td></tr>
-        <tr><th>研究代表者</th><td>藤原 康弘（名城大学 外国語学部 教授）</td></tr>
-        <tr><th>研究分担者</th><td>仲 潔（岐阜大学 教育学部 教授）、池 沙弥（名城大学 外国語学部 教授）、柴田 美紀（広島大学 人間社会科学研究科 教授）</td></tr>
-        <tr><th>キーワード</th><td>国際英語論／批判的応用言語学／授業実践／言語意識／教材分析</td></tr>
-        <tr><th>助成</th><td>独立行政法人 日本学術振興会（JSPS）</td></tr>
-      </table>
 
       <!-- 研究目的 -->
       <h3 class="sub">研究の目的と「問い」</h3>
@@ -613,6 +607,20 @@ table.info tr:last-child th,table.info tr:last-child td{border-bottom:none}
         <div class="viewpoint"><div class="v-icon">📝</div><p>テストと評価</p></div>
       </div>
 
+      <!-- 科研費の基本情報（KAKENHI-PROJECT-24K04172） -->
+      <h3 class="sub">研究課題の基本情報</h3>
+      <table class="info">
+        <tr><th>研究種目</th><td>科学研究費助成事業 基盤研究（C）（一般）</td></tr>
+        <tr><th>課題番号</th><td>JP24K04172</td></tr>
+        <tr><th>研究課題名</th><td>国際英語論と批判的応用言語学に基づく英語教育・教員養成の創造</td></tr>
+        <tr><th>研究期間</th><td>2024年4月 〜 2028年3月（2024〜2027年度）</td></tr>
+        <tr><th>研究機関</th><td>名城大学</td></tr>
+        <tr><th>研究代表者</th><td>藤原 康弘（名城大学 外国語学部 教授）</td></tr>
+        <tr><th>研究分担者</th><td>仲 潔（岐阜大学 教育学部 教授）、池 沙弥（名城大学 外国語学部 教授）、柴田 美紀（広島大学 人間社会科学研究科 教授）</td></tr>
+        <tr><th>キーワード</th><td>国際英語論／批判的応用言語学／授業実践／言語意識／教材分析</td></tr>
+        <tr><th>助成</th><td>独立行政法人 日本学術振興会（JSPS）</td></tr>
+      </table>
+
       <!-- 主要参考文献 -->
       <h3 class="sub">主要参考文献</h3>
       <ul class="ref-list">
@@ -669,7 +677,8 @@ table.info tr:last-child th,table.info tr:last-child td{border-bottom:none}
         <h2>教材ライブラリ</h2>
         <p class="sec-lead">
           指導案・ワークシート・テスト・音声・スライド・映像などを無料で公開しています。
-          授業や研修で自由にご活用ください（出典の明記をお願いします）。
+          あわせて、本プロジェクトの趣旨に通じる他の先生・研究者の教材も外部リンクでご紹介します。
+          授業や研修で自由にご活用ください（当サイトの教材は出典の明記を、リンク先の教材は各配布元の利用条件をご確認ください）。
         </p>
       </div>
 
@@ -704,10 +713,6 @@ table.info tr:last-child th,table.info tr:last-child td{border-bottom:none}
       <!-- 教材カード一覧（編集はスクリプト内 MATERIALS_DATA） -->
       <div class="mat-grid" id="matGrid"><!-- JSが自動生成 --></div>
       <p class="mat-empty" id="matEmpty">該当する教材が見つかりませんでした。条件を変えてお試しください。</p>
-
-      <p class="note">
-        ※ 現在掲載している教材はすべてダミーデータです。
-      </p>
     </div>
   </div>
 </section>
@@ -727,7 +732,6 @@ table.info tr:last-child th,table.info tr:last-child td{border-bottom:none}
         </p>
       </div>
       <div id="memberSections"><!-- JSが自動生成（編集はスクリプト内 MEMBERS_DATA） --></div>
-      <p class="note">※ 研究協力者・研究会メンバーの氏名・所属は架空のダミーデータです。今後、実際の情報に差し替えます。</p>
     </div>
   </div>
 </section>
@@ -749,16 +753,21 @@ table.info tr:last-child th,table.info tr:last-child td{border-bottom:none}
       <div class="contact-wrap">
         <div class="contact-info">
           <h3>お問い合わせの前に</h3>
-          <p>教材はすべて無料でご利用いただけます。ご利用の際は出典（本サイト名）の明記をお願いします。</p>
+          <p style="margin-bottom:8px">教材は無料でご利用いただけます。ご利用の際は、次の2点の明記をお願いします。</p>
+          <ul style="margin:0 0 14px;padding-left:1.3em;font-size:13.5px;color:var(--ink-soft);line-height:1.9">
+            <li>出典（本サイト名）</li>
+            <li>教材の作成者名</li>
+          </ul>
+          <p style="font-size:12.5px;color:var(--ink-soft);margin-bottom:14px">※ 外部リンクで紹介している教材は、各配布元の利用条件に従ってください。</p>
           <p>授業実践の協力校・研究会メンバーは随時募集しています。「研究会参加・実践協力」を選択のうえご連絡ください。</p>
           <p>お返事まで数日いただく場合があります。あらかじめご了承ください。</p>
         </div>
 
         <!-- フォーム（デモ：送信機能なし。WordPressではContact Form 7等で置換） -->
         <form class="contact-form" id="contactForm" novalidate>
-          <div class="form-success" id="formSuccess">
-            ✅ お問い合わせを受け付けました（デモ表示です。実際の送信は行われていません）。
-          </div>
+          <div class="form-success" id="formSuccess">✅ お問い合わせを受け付けました。ありがとうございます。</div>
+          <div class="form-error" id="formError">⚠ 送信に失敗しました。お手数ですが時間をおいて再度お試しいただくか、メール（fujiwara@meijo-u.ac.jp）にてご連絡ください。</div>
+          <input type="hidden" name="_subject" value="【GELT実践サイト】お問い合わせ">
           <div class="form-grid">
             <div class="form-row">
               <label for="cName">お名前<span class="req">必須</span></label>
@@ -805,7 +814,7 @@ table.info tr:last-child th,table.info tr:last-child td{border-bottom:none}
           </div>
           <button type="submit" class="btn btn-navy">送信する</button>
           <p style="font-size:12px;color:var(--ink-soft);margin-top:10px">
-            ※ このフォームはデモ版のため、実際の送信は行われません。
+            ※ いただいた内容は本プロジェクト代表に送信されます。
           </p>
         </form>
       </div>
@@ -845,164 +854,8 @@ table.info tr:last-child th,table.info tr:last-child td{border-bottom:none}
   </div>
 </footer>
 
-<script>
-/* 代表者の顔写真（顔部分をトリミング済み・base64埋め込みデータ）。
-   写真を差し替える場合はこのscriptブロックを削除し、
-   MEMBERS_DATA の photo に画像ファイル名を指定してください。 */
-var PHOTO_FUJIWARA = "data:image/jpeg;base64," +
-"/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBAUEBAYFBQUGBgYHCQ4JCQgICRINDQoOFRIWFhUSFBQXGiEcFxgfGRQUHScdHyIjJSUlFhwpLCgkKyEkJST/2wBDAQYGBgkICREJCREkGBQYJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCT/wAARCAGQAZADASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD6jooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACkpaKACiiigAooooAKKSloASloooASloooASloooASilooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiikoAWiiigAooooAKKSloASlpKWgApKKKAFooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiikoAWiiigAooooAKKKKACiiigAooooAKK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
-"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";
-</script>
-<script>
-/* ════════════════════════════════════════════════════════════
-   ▼▼▼ コンテンツデータ（ここを編集すればページに反映されます）▼▼▼
-   WordPress移行時：NEWS_DATA→投稿、MATERIALS_DATA→カスタム投稿
-   「教材」、MEMBERS_DATA→メンバー情報、にそれぞれ対応します。
-════════════════════════════════════════════════════════════ */
-
-/* ---- お知らせ（新しいものを上に追加）----
-   type: news(お知らせ) / mat(教材) / event(イベント) / circle(研究会) */
-const NEWS_DATA = [
-  { date: "2026.06.01", type: "news",   title: "本サイトを公開しました（試験運用中）", url: "#home" },
-  { date: "2026.05.20", type: "mat",    title: "ワークシート「シンガポール英語のフレーズを推測しよう」など2点を追加しました", url: "#materials" },
-  { date: "2026.04.10", type: "circle", title: "第3回 GELT実践研究会（オンライン開催）のご案内", url: "#contact" },
-  { date: "2026.03.15", type: "event",  title: "公開シンポジウム（2027年度開催予定）の準備を開始しました", url: "#research" },
-  { date: "2026.02.28", type: "mat",    title: "リスニング音声「多様な英語リスニング素材集 Vol.1」を公開しました", url: "#materials" },
-];
-
-/* ---- 教材（カード1枚＝1項目）----
-   cat（種類）: 指導案 / ワークシート / テスト・評価 / リスニング音声 /
-                スライド / ハンドアウト / ビデオ教材 / オンデマンド授業
-   levels（校種）: 小学校 / 中学校 / 高等学校 / 大学・教員養成（複数可）
-   url: 実ファイルのURLに差し替えてください（現在は "#" の仮リンク） */
-const MATERIALS_DATA = [
-  {
-    cat: "指導案", icon: "📄",
-    title: "「世界の英語に出会う」フィリピン英語の語彙推測活動",
-    desc: "十分なコンテクストの中でフィリピン英語の単語・フレーズの意味を推測する活動。方略的能力と多様な英語への認識を育てます。",
-    levels: ["中学校"], file: "PDF・8ページ", updated: "2026.05.20", url: "#"
-  },
-  {
-    cat: "ワークシート", icon: "📝",
-    title: "シンガポール英語のフレーズを推測しよう",
-    desc: "Singlishの表現を文脈から推測するペアワーク用ワークシート。解答例・指導のポイント付き。",
-    levels: ["高等学校"], file: "PDF・4ページ", updated: "2026.05.20", url: "#"
-  },
-  {
-    cat: "リスニング音声", icon: "🎧",
-    title: "多様な英語リスニング素材集 Vol.1（米・英・印・日）",
-    desc: "4つの英語変種による同一スクリプトの音声セット。聞き比べを通して英語の多様性への気づきを促します。",
-    levels: ["高等学校", "大学・教員養成"], file: "MP3×8・スクリプト付", updated: "2026.02.28", url: "#"
-  },
-  {
-    cat: "スライド", icon: "🖥️",
-    title: "国際英語論入門：EIL・WE・ELFからGELTへ",
-    desc: "教員研修・教職課程向けの概説スライド。国際英語論の3分野とGELTの考え方を40分で概観できます。",
-    levels: ["大学・教員養成"], file: "PPTX・32枚", updated: "2026.04.05", url: "#"
-  },
-  {
-    cat: "テスト・評価", icon: "✅",
-    title: "言語意識アンケート（EILPS簡易版・日本語）",
-    desc: "児童・生徒・学生の英語観／言語意識を測る質問紙の簡易版。実践の事前・事後比較にご活用ください。",
-    levels: ["中学校", "高等学校", "大学・教員養成"], file: "PDF＋Excel集計表", updated: "2026.03.10", url: "#"
-  },
-  {
-    cat: "ハンドアウト", icon: "📋",
-    title: "「ネイティブらしさ」を問い直す授業ガイド",
-    desc: "批判的応用言語学の視点から「正しい英語とは何か」を生徒と考えるためのディスカッション教材。",
-    levels: ["高等学校"], file: "PDF・6ページ", updated: "2026.01.18", url: "#"
-  },
-  {
-    cat: "ビデオ教材", icon: "🎬",
-    title: "世界の英語話者インタビュー集（字幕付き）",
-    desc: "さまざまな国・地域の英語話者へのショートインタビュー。外国語活動の導入や帯活動に使える3〜5分の動画集。",
-    levels: ["小学校", "中学校"], file: "動画リンク集", updated: "2025.12.01", url: "#"
-  },
-  {
-    cat: "オンデマンド授業", icon: "🎓",
-    title: "授業実践記録：教科書のインド英語話者をどう扱うか",
-    desc: "中学校の検定教科書に登場するインド英語話者の題材を活かした授業のオンデマンド映像と振り返り解説。",
-    levels: ["中学校", "大学・教員養成"], file: "動画・45分", updated: "2025.11.10", url: "#"
-  },
-  {
-    cat: "指導案", icon: "📄",
-    title: "小学校外国語「いろいろな国のあいさつと英語」",
-    desc: "世界のあいさつと多様な英語の音に親しむ小学校外国語活動の単元指導案。ICT活用例付き。",
-    levels: ["小学校"], file: "PDF・10ページ", updated: "2025.10.22", url: "#"
-  },
-];
-
-/* ---- メンバー ----
-   研究代表者・研究分担者：科研費（JP24K04172）の公式情報にもとづく実データ。
-   研究協力者・研究会メンバー：架空のダミー（今後差し替え）。
-   group: lead(研究代表者) / co(研究分担者) / circle(研究協力者・研究会メンバー)
-   photo: 写真ファイル名（index.htmlと同じフォルダに配置／省略時は頭文字を表示） */
-const MEMBERS_DATA = [
-  {
-    group: "lead", name: "藤原 康弘", kana: "FUJIWARA Yasuhiro",
-    photo: (typeof PHOTO_FUJIWARA !== "undefined") ? PHOTO_FUJIWARA : "member_fujiwara.jpg",
-    affil: "名城大学 外国語学部 教授",
-    field: "国際英語論・第二言語習得・英語教育",
-    role: "研究統括／テストと評価の分析"
-  },
-  {
-    group: "co", name: "仲 潔", kana: "NAKA Kiyoshi",
-    affil: "岐阜大学 教育学部 教授",
-    field: "批判的応用言語学・英語教員養成",
-    role: "教材（教科書等）の内容と利用法の分析"
-  },
-  {
-    group: "co", name: "池 沙弥", kana: "IKE Saya",
-    affil: "名城大学 外国語学部 教授",
-    field: "国際英語論（ELF）・談話分析",
-    role: "授業と教室談話の分析"
-  },
-  {
-    group: "co", name: "柴田 美紀", kana: "SHIBATA Miki",
-    affil: "広島大学 人間社会科学研究科 教授",
-    field: "国際英語論・第二言語習得",
-    role: "児童・生徒・学生・教員の言語意識の調査"
-  },
-  {
-    group: "circle", name: "葛西 結衣", kana: "KASAI Yui",
-    affil: "海外研究機関（米国） 研究員",
-    field: "ELF・教室談話・教材研究",
-    role: "研究協力者／海外動向の調査"
-  },
-  {
-    group: "circle", name: "青木 大地", kana: "AOKI Daichi",
-    affil: "名南市立ひばり小学校 教諭",
-    field: "小学校外国語",
-    role: "研究会メンバー／小学校での授業実践"
-  },
-  {
-    group: "circle", name: "西村 花", kana: "NISHIMURA Hana",
-    affil: "緑川市立中央中学校 教諭",
-    field: "中学校英語",
-    role: "研究会メンバー／中学校での授業実践"
-  },
-  {
-    group: "circle", name: "石田 健", kana: "ISHIDA Ken",
-    affil: "県立あすなろ高等学校 教諭",
-    field: "高校英語",
-    role: "研究会メンバー／高校での授業実践"
-  },
-];
-
-/* ════════════════════════════════════════════════════════════
+<script src="data.js"></script>
+<script>/* ════════════════════════════════════════════════════════════
    ▲▲▲ データはここまで。以下は表示用プログラム（編集不要）▲▲▲
 ════════════════════════════════════════════════════════════ */
 
@@ -1068,7 +921,9 @@ function renderMaterials() {
         </div>
         <div class="mat-foot">
           <span class="m-meta">更新日：${m.updated}</span>
-          <a class="btn-dl" href="${m.url}" onclick="return dlNotice(event)">⬇ ダウンロード</a>
+          ${m.mode === "link"
+            ? `<a class="btn-link" href="${m.url}" target="_blank" rel="noopener" onclick="return linkNotice(event)">🔗 リンク</a>`
+            : `<a class="btn-dl" href="${m.url}" onclick="return dlNotice(event)">⬇ ダウンロード</a>`}
         </div>
       </div>
     </article>`).join("");
@@ -1080,6 +935,16 @@ function dlNotice(e) {
   if (href === "#") {
     e.preventDefault();
     alert("これはダミーの教材です。実際のファイルは今後公開予定です。");
+    return false;
+  }
+  return true;
+}
+function linkNotice(e) {
+  // リンク先が未設定（#）の場合のみ案内を表示。設定済みなら新しいタブで開きます。
+  const href = e.currentTarget.getAttribute("href");
+  if (href === "#" || !href) {
+    e.preventDefault();
+    alert("リンク先は現在準備中です。");
     return false;
   }
   return true;
@@ -1125,14 +990,49 @@ function renderMembers() {
   }).join("");
 }
 
-/* ---------- 6) お問い合わせフォーム（デモ） ---------- */
-document.getElementById("contactForm").addEventListener("submit", e => {
+/* ---------- 6) お問い合わせフォーム（Formspree連携） ----------
+   送信先は data.js の SITE_CONFIG.formEndpoint で設定します。
+   未設定（プレースホルダ）の間はデモ表示となります。 */
+const contactForm = document.getElementById("contactForm");
+const formSuccess = document.getElementById("formSuccess");
+const formError   = document.getElementById("formError");
+contactForm.addEventListener("submit", async e => {
   e.preventDefault();
-  const form = e.currentTarget;
-  if (!form.checkValidity()) { form.reportValidity(); return; }
-  document.getElementById("formSuccess").style.display = "block";
-  form.reset();
-  document.getElementById("formSuccess").scrollIntoView({ behavior: "smooth", block: "center" });
+  if (!contactForm.checkValidity()) { contactForm.reportValidity(); return; }
+  const endpoint = (typeof SITE_CONFIG !== "undefined" && SITE_CONFIG.formEndpoint) ? SITE_CONFIG.formEndpoint : "";
+  const notSet = !endpoint || endpoint.indexOf("xxxx") !== -1;
+  if (formError) formError.style.display = "none";
+  // 送信先が未設定の場合はデモ表示
+  if (notSet) {
+    formSuccess.textContent = "✅ 入力を確認しました（デモ表示：送信先が未設定です。data.js の SITE_CONFIG.formEndpoint に Formspree のURLを設定すると実際に送信されます）。";
+    formSuccess.style.display = "block";
+    contactForm.reset();
+    formSuccess.scrollIntoView({ behavior: "smooth", block: "center" });
+    return;
+  }
+  const btn = contactForm.querySelector('button[type="submit"]');
+  const oldLabel = btn.textContent;
+  btn.disabled = true; btn.textContent = "送信中…";
+  try {
+    const res = await fetch(endpoint, {
+      method: "POST",
+      headers: { "Accept": "application/json" },
+      body: new FormData(contactForm)
+    });
+    if (res.ok) {
+      formSuccess.textContent = "✅ お問い合わせを受け付けました。ありがとうございます。";
+      formSuccess.style.display = "block";
+      contactForm.reset();
+      formSuccess.scrollIntoView({ behavior: "smooth", block: "center" });
+    } else {
+      throw new Error("send failed");
+    }
+  } catch (err) {
+    if (formError) { formError.style.display = "block"; formError.scrollIntoView({ behavior: "smooth", block: "center" }); }
+    else { alert("送信に失敗しました。時間をおいて再度お試しください。"); }
+  } finally {
+    btn.disabled = false; btn.textContent = oldLabel;
+  }
 });
 
 /* ---------- 初期化 ---------- */
@@ -1141,5 +1041,6 @@ renderMaterials();
 renderMembers();
 showPage();
 </script>
+
 </body>
 </html>
